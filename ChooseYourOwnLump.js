@@ -498,7 +498,7 @@ CYOL.UI.isDesirablePrediction = function(prediction, additionalGrandmapocalypseS
         if(!prediction.grandmaCount) return currentSlot === prediction.rigidelSlot;
 
         let extraGrandmas = 200*(prediction.rigidelSlot - currentSlot); // make up the difference
-        return prediction.grandmaCount + extraGrandmas <= 600
+        return prediction.grandmaCount + extraGrandmas <= 900
             && prediction.grandmaCount + extraGrandmas >= 0;
     }
 
