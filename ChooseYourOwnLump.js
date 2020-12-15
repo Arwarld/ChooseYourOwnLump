@@ -127,7 +127,7 @@ CYOL.TransientState = class {
                  * It favors using grandmas instead of Rigidel;
                  * the idea is to maximize the usefulness of the pantheon
                  * for uses beyond this trick. */
-                for(; grandmaCount <= 600; grandmaCount++) {
+                for(; grandmaCount <= 900; grandmaCount++) {
                     for(let gStage = 0; gStage <= 3; gStage++) {
                         this.grandmafulStates.push(new this(
                             gStage, dragon, rigidelSlot, grandmaCount
@@ -169,7 +169,7 @@ CYOL.PersistentState = class {
         discrepancy = Number(discrepancy); // Just to be sure
         let ripeAge = 23 * 60*60*1000; // 23 hours
         if (this.hasSteviaCaelestis) ripeAge -= 60*60*1000;
-        if (this.hasSugarAgingProcess) ripeAge -= 6*1000 * Math.min(transientState.grandmaCount, 600);
+        if (this.hasSugarAgingProcess) ripeAge -= 6*1000 * Math.min(transientState.grandmaCount, 900);
         ripeAge -= 20*60*1000 * transientState.rigidelSlot;
         ripeAge /= 1 + 0.05*transientState.dragon.auraValue();
         let autoharvestTime = Math.floor(this.lumpT) + ripeAge + 60*60*1000 + discrepancy;
